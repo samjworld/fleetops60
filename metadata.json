@@ -1,0 +1,8 @@
+{
+  "name": "FleetOps 60",
+  "description": "Comprehensive heavy machinery, fuel, operator, and site management system for construction projects.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
