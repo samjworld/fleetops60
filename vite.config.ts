@@ -1,15 +1,11 @@
-import { fileURLToPath } from 'node:url';
-import { dirname, resolve } from 'node:path';
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
 
   return {
+    base: '/fleetops60/',   // 👈 add this line (use your repo name)
     server: {
       port: 3000,
       host: '0.0.0.0',
@@ -21,9 +17,7 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: {
-        '@': resolve(__dirname, '.'),
-        // or if you prefer alias to src:
-        // '@': resolve(__dirname, 'src'),
+        '@': '/src',
       },
     },
   };
